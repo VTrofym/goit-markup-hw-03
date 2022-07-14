@@ -12,6 +12,7 @@
 /* белый #FFFFFF */
 
 :root {
+    --background-button-main: #188CE8;
     --background-color-white: #FFFFFF;
     --background-color-black: #2F303A;
     --background-color-grey: #F5F4FA;
@@ -25,8 +26,8 @@
 
 
 body {
-    background-color: #FFFFFF;
-    color: #757575;
+    background-color: var(--font-сolor-white);
+    color: var(--font-сolor-black-p);
     font-family: Roboto, sans-serif;
     /* font-family: 'Raleway', sans-serif; */
 }
@@ -45,11 +46,29 @@ button {
 }
 
 .button-main {
-    background-color: var(--background-color-blue);
+    background: var(--background-color-blue);
     color: var(--font-сolor-white);
 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    /* display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em; */
+
+    border: none;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border: 0;
+}
+
+.button-main:hover,
+.button-main:focus {
+    background: var(--background-button-main);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px; 
 }
 
 
@@ -57,8 +76,16 @@ button {
 
 
 
-
 /* Header */
+/* Logo */
+
+.header {
+    /* width: 1600px;
+    height: 80px;
+    left: 0px;
+    top: 0px; */
+    border: 1px solid #ECECEC;
+}
 
 .logo {
     font-size: 26px;
@@ -80,6 +107,8 @@ button {
     font-family: Raleway, sans-serif;
 }
 
+/* Nav */
+
 .site-nav .link {
     color: var(--font-сolor-black-other);
 }
@@ -88,6 +117,12 @@ button {
     color: var(--font-сolor-blue);
 }
 
+.link.studiya.first {
+    color: var(--font-сolor-blue);
+}
+
+
+
 .studiya, .portfolio, .contacts, .mail, .tel {
     font-weight: 500;
     font-size: 14px;
@@ -95,7 +130,7 @@ button {
 }
 
 .mail-tel .link {
-    color: var(--font-сolor-black-other);
+    color: var(--font-сolor-black-p);
 }
 
 .mail-tel .link:hover,
@@ -119,8 +154,23 @@ button {
 }
 
 /* акценты в работе */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 .title-s1 {
     color: var(--font-сolor-black-other);
+    text-transform: uppercase;
 }
 
 .p-s1 {
@@ -142,6 +192,10 @@ button {
 /* состав команды */
 .team {
     background-color: var(--background-color-grey);
+}
+
+.team-bg {
+    background-color: var(--background-color-white);
 }
 
 .title-s3 {
@@ -178,19 +232,27 @@ button {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    font-style: normal;
 }
 
-.mail,
+.mail-footer,
 .tel-nom {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    font-style: normal;
 }
 
+.mail-footer:hover,
+.mail-footer:focus {
+    color: var(--font-сolor-blue);
+}
 
-
-
+.tel-nom:hover,
+.tel-nom:focus {
+    color: var(--font-сolor-blue);
+}
 
 
 
@@ -219,23 +281,39 @@ button {
     justify-content: center;
 } */
 
+.link.portfolio.second {
+    color: var(--font-сolor-blue);
+}
+
 .button-portfolio-all:hover,
 .button-portfolio-websites:hover,
 .button-portfolio-apps:hover,
 .button-portfolio-design:hover,
 .button-portfolio-marketing:hover {
     color: var(--font-сolor-white);
-    background-color: var(--background-color-blue)
+    background-color: var(--background-color-blue);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-portfolio-all:focus,
+.button-portfolio-websites:focus,
+.button-portfolio-apps:focus,
+.button-portfolio-design:focus,
+.button-portfolio-marketing:focus {
+    color: var(--font-сolor-white);
+    background-color: var(--background-color-blue);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-portfolio {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+    border: none;
+    border-radius: 4px;
 }
 
 .button-portfolio-all {
-    position: absolute;
     width: 73px;
     height: 38px;
     left: 495px;
@@ -243,36 +321,27 @@ button {
 }
 
 .button-portfolio-websites {
-    position: absolute;
     width: 128px;
     height: 38px;
-    left: 576px;
-    top: 174px;
 }
 
 .button-portfolio-apps {
-    position: absolute;
     width: 145px;
     height: 38px;
-    left: 712px;
-    top: 174px;
 }
 
 .button-portfolio-design {
-    position: absolute;
     width: 103px;
     height: 38px;
-    left: 865px;
-    top: 174px;
 }
 
 .button-portfolio-marketing {
-    position: absolute;
     width: 130px;
     height: 38px;
-    left: 976px;
-    top: 174px;
 }
+
+
+
 
 
 
