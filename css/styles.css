@@ -141,6 +141,10 @@ button {
 
 /* MAIN */
 
+.main {
+
+}
+
 /* Блок Заголовок */
 .block-title {
     background-color: var(--background-color-black);
@@ -362,3 +366,14 @@ button {
     line-height: 1.9;
 }
 
+
+.control1 {
+    width: 1050px;
+    height: 1050px;
+}
+
+.control2 {
+    border: 15px solid cyan;
+    padding: 140px 10px 30px 40px;
+    margin: 200px 100px 200px 150px;
+}
