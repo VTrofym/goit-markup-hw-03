@@ -11,6 +11,16 @@
 /* черный для массива текста #757575 */
 /* белый #FFFFFF */
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 :root {
     --background-button-main: #188CE8;
     --background-color-white: #FFFFFF;
@@ -22,6 +32,8 @@
     --font-сolor-white: #FFFFFF;
     --font-сolor-black-p: #757575;
     --font-сolor-black-other: #212121;
+    --font-color-border: #ECECEC;
+    --font-color-footer-mail-tel: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -29,6 +41,8 @@ body {
     background-color: var(--font-сolor-white);
     color: var(--font-сolor-black-p);
     font-family: Roboto, sans-serif;
+    margin: 0;
+
     /* font-family: 'Raleway', sans-serif; */
 }
 
@@ -52,10 +66,18 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    text-align: center;
+
+    min-width: 200px;
+
+    margin-top: 30px;
+    margin-bottom: 200px;
+    padding: 10px 32px;
+
+    display: inline-block;
 
     /* display: flex;
     align-items: center;
-    text-align: center;
     letter-spacing: 0.06em; */
 
     border: none;
@@ -71,7 +93,14 @@ button {
     border-radius: 4px; 
 }
 
-
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
 
 
 
@@ -79,13 +108,15 @@ button {
 /* Header */
 /* Logo */
 
-.header {
-    /* width: 1600px;
-    height: 80px;
-    left: 0px;
-    top: 0px; */
-    border: 1px solid #ECECEC;
+.header > .container {
+    border: 1px solid var(--font-color-border);
+    outline: 1px solid tomato;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+
 
 .logo {
     font-size: 26px;
@@ -109,6 +140,13 @@ button {
 
 /* Nav */
 
+
+
+.portfolio-head {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .site-nav .link {
     color: var(--font-сolor-black-other);
 }
@@ -121,7 +159,19 @@ button {
     color: var(--font-сolor-blue);
 }
 
+.site-nav .studiya {
+    padding-left: 93px;
+}
 
+.site-nav, .mail-tel {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.mail-tel .link {
+    padding-left: 50px;
+}
 
 .studiya, .portfolio, .contacts, .mail, .tel {
     font-weight: 500;
@@ -148,9 +198,17 @@ button {
 /* Блок Заголовок */
 .block-title {
     background-color: var(--background-color-black);
+    outline: 1px solid tomato;
+
+    text-align: center;
+    margin-bottom: 94px;
 }
 
 .h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 200px;
+
     color: var(--font-сolor-white);
     font-weight: 900;
     font-size: 44px;
@@ -158,6 +216,12 @@ button {
 }
 
 /* акценты в работе */
+
+.for-business {
+    margin-bottom: 94px;
+    outline: 1px solid tomato;
+}
+
 
 .visually-hidden {
     position: absolute;
@@ -172,9 +236,24 @@ button {
     margin: -1px;
 }
 
+.list-s1 {
+    padding-left: 0;
+}
+
+.title-h2,
+.list-s1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.li-s1 {
+    width: 270px;
+}
+
 .title-s1 {
     color: var(--font-сolor-black-other);
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .p-s1 {
@@ -185,21 +264,41 @@ button {
 
 /* виды работ */
 
+.section2 {
+    outline: 1px solid tomato;
+    margin-bottom: 94px;
+}
+
 .title-s2 {
     color: var(--font-сolor-black-other);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 50px;
 }
+
+.list-s2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+
 
 /* состав команды */
 .team {
     background-color: var(--background-color-grey);
+    outline: 1px solid tomato;
 }
 
 .team-bg {
     background-color: var(--background-color-white);
+    width: 270px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .title-s3 {
@@ -208,6 +307,18 @@ button {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
+.list-s3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 94px;
+    padding-left: 0;
 }
 
 .name-s3 {
@@ -215,6 +326,7 @@ button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+    text-align: center;
     
 }
 
@@ -222,6 +334,10 @@ button {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 /* контакты поддержки */
@@ -229,7 +345,10 @@ button {
 .footer {
     background-color: var(--background-color-black);
     color: var(--font-сolor-white);
+    outline: 1px solid tomato;
 }
+
+
 
 .location {
     color: var(--font-сolor-white);
@@ -241,7 +360,7 @@ button {
 
 .mail-footer,
 .tel-nom {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--font-color-footer-mail-tel);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -256,6 +375,14 @@ button {
 .tel-nom:hover,
 .tel-nom:focus {
     color: var(--font-сolor-blue);
+}
+
+.address {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 
@@ -285,6 +412,21 @@ button {
     justify-content: center;
 } */
 
+.main-portfolio {
+    outline: 1px solid tomato;
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+
+
+
+.title-fhoto-pf {
+    border: 1px solid #EEEEEE;
+    border-top: none;
+    padding: 20px 24px;
+    width: 370px;
+}
+
 .link.portfolio.second {
     color: var(--font-сolor-blue);
 }
@@ -310,44 +452,48 @@ button {
 }
 
 .button-portfolio {
+    background-color: var(--background-color-grey);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+
     border: none;
     border-radius: 4px;
+    text-align: center;
+
+    padding: 6px 22px;
+
+    display: inline-block;
 }
 
 .button-portfolio-all {
-    width: 73px;
-    height: 38px;
-    left: 495px;
-    top: 174px;
+    min-width: 73px;
 }
 
 .button-portfolio-websites {
-    width: 128px;
-    height: 38px;
+    min-width: 128px;
 }
 
 .button-portfolio-apps {
-    width: 145px;
-    height: 38px;
+    min-width: 145px;
 }
 
 .button-portfolio-design {
-    width: 103px;
-    height: 38px;
+    min-width: 103px;
 }
 
 .button-portfolio-marketing {
-    width: 130px;
-    height: 38px;
+    min-width: 130px;
 }
 
+.ul-button {
+    margin-bottom: 34px;
+    padding-left: 0;
+}
 
-
-
-
+.ul-portfolio {
+    padding-left: 0;
+}
 
 
 .title-img {
@@ -356,6 +502,9 @@ button {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
+
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .p-portfolio {
@@ -366,14 +515,3 @@ button {
     line-height: 1.9;
 }
 
-
-.control1 {
-    width: 1050px;
-    height: 1050px;
-}
-
-.control2 {
-    border: 15px solid cyan;
-    padding: 140px 10px 30px 40px;
-    margin: 200px 100px 200px 150px;
-}
