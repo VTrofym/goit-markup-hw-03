@@ -1,16 +1,3 @@
-/* Стили для index.html */
-
-/* основной цвет фона #FFFFFF */
-/* вторичный цвет фона #F5F4FA */
-/* черный фон #2F303A */
-/* голубой фон #2196F3 */
-
-/* голубой #2196F3   */
-/* черный лого #000000 */
-/* черный не лого #212121 */
-/* черный для массива текста #757575 */
-/* белый #FFFFFF */
-
 html {
     box-sizing: border-box;
 }
@@ -36,12 +23,12 @@ html {
     --font-color-footer-mail-tel: rgba(255, 255, 255, 0.6);
 }
 
-
 body {
+    margin: 0;
+    
     background-color: var(--font-сolor-white);
     color: var(--font-сolor-black-p);
     font-family: Roboto, sans-serif;
-    margin: 0;
 
     /* font-family: 'Raleway', sans-serif; */
 }
@@ -60,63 +47,57 @@ button {
 }
 
 .button-main {
-    background: var(--background-color-blue);
-    color: var(--font-сolor-white);
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
     text-align: center;
-
-    min-width: 200px;
-
     margin-top: 30px;
     margin-bottom: 200px;
     padding: 10px 32px;
-
     display: inline-block;
-
-    /* display: flex;
-    align-items: center;
-    letter-spacing: 0.06em; */
-
     border: none;
-
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    background: var(--background-color-blue);
+    color: var(--font-сolor-white);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    min-width: 200px;
 }
 
 .button-main:hover,
 .button-main:focus {
-    background: var(--background-button-main);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px; 
+    border-radius: 4px;
+    
+    background: var(--background-button-main);
 }
+    
 
 .container {
     margin-left: auto;
     margin-right: auto;
+
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     outline: 2px solid tomato;
 }
 
-
-
-
 /* Header */
 /* Logo */
 
 .header > .container {
-    border: 1px solid var(--font-color-border);
     outline: 1px solid tomato;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    height: 80px;
 }
 
-
+.header > .container-pf {
+    border: 1px solid var(--font-color-border);
+}
 
 .logo {
     font-size: 26px;
@@ -140,11 +121,8 @@ button {
 
 /* Nav */
 
-
-
-.portfolio-head {
-    padding-left: 50px;
-    padding-right: 50px;
+.block-nav {
+    margin-left: 93px;
 }
 
 .site-nav .link {
@@ -159,18 +137,15 @@ button {
     color: var(--font-сolor-blue);
 }
 
-.site-nav .studiya {
-    padding-left: 93px;
+.link-pf-main {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .site-nav, .mail-tel {
     padding: 0;
     margin: 0;
     display: flex;
-}
-
-.mail-tel .link {
-    padding-left: 50px;
 }
 
 .studiya, .portfolio, .contacts, .mail, .tel {
@@ -183,25 +158,32 @@ button {
     color: var(--font-сolor-black-p);
 }
 
+.tel-main-head {
+    margin-left: 30px;
+}
+
 .mail-tel .link:hover,
 .mail-tel .link:focus {
     color: var(--font-сolor-blue);
 }
 
+.mail-tel {
+    margin-left: auto;
+}
 
 /* MAIN */
 
-.main {
-
-}
-
 /* Блок Заголовок */
-.block-title {
-    background-color: var(--background-color-black);
-    outline: 1px solid tomato;
 
+.block-title {
     text-align: center;
     margin-bottom: 94px;
+
+    background-color: var(--background-color-black);
+
+    outline: 1px solid tomato;
+
+
 }
 
 .h1 {
@@ -219,9 +201,9 @@ button {
 
 .for-business {
     margin-bottom: 94px;
+
     outline: 1px solid tomato;
 }
-
 
 .visually-hidden {
     position: absolute;
@@ -238,6 +220,7 @@ button {
 
 .list-s1 {
     padding-left: 0;
+    display: flex;
 }
 
 .title-h2,
@@ -246,14 +229,19 @@ button {
     margin-bottom: 0;
 }
 
+.li-s1-block {
+    margin-right: 30px;
+}
+
 .li-s1 {
     width: 270px;
 }
 
 .title-s1 {
+    margin-bottom: 10px;
+
     color: var(--font-сolor-black-other);
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
 .p-s1 {
@@ -266,52 +254,59 @@ button {
 
 .section2 {
     outline: 1px solid tomato;
+
     margin-bottom: 94px;
 }
 
 .title-s2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+
     color: var(--font-сolor-black-other);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-    text-align: center;
-
-    margin-top: 0;
-    margin-bottom: 50px;
 }
 
 .list-s2 {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    display: flex;
 }
 
-
+.li-work-2 {
+    margin-right: 30px;
+    margin-left: 30px;
+}
 
 /* состав команды */
 .team {
     background-color: var(--background-color-grey);
+
     outline: 1px solid tomato;
 }
 
 .team-bg {
-    background-color: var(--background-color-white);
-    width: 270px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--background-color-white);
+    width: 270px;
 }
 
 .title-s3 {
-    color: var(--font-сolor-black-other);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     text-align: center;
-
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 94px;
     padding-bottom: 50px;
+
+    color: var(--font-сolor-black-other);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
 }
 
 .list-s3 {
@@ -319,25 +314,33 @@ button {
     margin-bottom: 0;
     padding-bottom: 94px;
     padding-left: 0;
+    display: flex;
+}
+
+.team-igor,
+.team-olga,
+.team-kolya {
+    margin-right: 30px;
 }
 
 .name-s3 {
+    text-align: center;
+
     color: var(--font-сolor-black-other);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
-    
 }
 
 .job-s3 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-bottom: 30px;
     text-align: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
 }
 
 /* контакты поддержки */
@@ -345,10 +348,13 @@ button {
 .footer {
     background-color: var(--background-color-black);
     color: var(--font-сolor-white);
+
     outline: 1px solid tomato;
 }
 
-
+.footer .container {
+    padding-top: 60px;
+}
 
 .location {
     color: var(--font-сolor-white);
@@ -385,46 +391,27 @@ button {
     padding-bottom: 60px;
 }
 
+/* Portfolio.html */
 
 
 
 
-
-
-
-
-
-
-/* Стили для portfolio.html */
-
-/* .button-portfolio {
-    background-color: var(--background-color-grey);
-    color: var(--font-сolor-black-other);
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    left: 700px;
-    top: 430px;
-    border-radius: 4px;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 .main-portfolio {
     outline: 1px solid tomato;
+
     margin-top: 94px;
     margin-bottom: 94px;
 }
 
-
+.img-pf {
+    display: block;
+}
 
 .title-fhoto-pf {
     border: 1px solid #EEEEEE;
     border-top: none;
     padding: 20px 24px;
-    width: 370px;
 }
 
 .link.portfolio.second {
@@ -436,9 +423,10 @@ button {
 .button-portfolio-apps:hover,
 .button-portfolio-design:hover,
 .button-portfolio-marketing:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
     color: var(--font-сolor-white);
     background-color: var(--background-color-blue);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-portfolio-all:focus,
@@ -446,24 +434,23 @@ button {
 .button-portfolio-apps:focus,
 .button-portfolio-design:focus,
 .button-portfolio-marketing:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
     color: var(--font-сolor-white);
     background-color: var(--background-color-blue);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-portfolio {
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 22px;
+    display: inline-block;
+
     background-color: var(--background-color-grey);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
-
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-
-    padding: 6px 22px;
-
-    display: inline-block;
 }
 
 .button-portfolio-all {
@@ -489,27 +476,49 @@ button {
 .ul-button {
     margin-bottom: 34px;
     padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pf-li-but-all,
+.pf-li-but-ws,
+.pf-li-but-apps,
+.pf-li-but-des,
+.pf-li-but-mark {
+    margin-right: 8px;
 }
 
 .ul-portfolio {
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.li-pf-img {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.li-pf-img:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.li-pf-img:nth-last-child(-n+3) {
+    margin-bottom: 0px;
+}
 
 .title-img {
-    color: var(--font-сolor-black-other);
+    margin-top: 0;
+    margin-bottom: 0;
 
+    color: var(--font-сolor-black-other);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .p-portfolio {
     color: var(--font-сolor-black-p);
-
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
