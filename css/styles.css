@@ -49,7 +49,6 @@ button {
 .button-main {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 200px;
     padding: 10px 32px;
     display: inline-block;
     border: none;
@@ -95,7 +94,7 @@ button {
     height: 80px;
 }
 
-.header > .container-pf {
+.header-border {
     border: 1px solid var(--font-color-border);
 }
 
@@ -177,19 +176,17 @@ button {
 
 .block-title {
     text-align: center;
-    margin-bottom: 94px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     background-color: var(--background-color-black);
 
     outline: 1px solid tomato;
-
-
 }
 
 .h1 {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 200px;
 
     color: var(--font-сolor-white);
     font-weight: 900;
@@ -200,7 +197,8 @@ button {
 /* акценты в работе */
 
 .for-business {
-    margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 
     outline: 1px solid tomato;
 }
@@ -223,31 +221,43 @@ button {
     display: flex;
 }
 
+.li-s1 {
+    width: 300px;
+    margin-right: 30px;
+}
+
+.li-s1:last-child {
+    margin-right: 0;
+}
+
+
+
+
 .title-h2,
 .list-s1 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.li-s1-block {
-    margin-right: 30px;
-}
-
-.li-s1 {
-    width: 270px;
-}
-
 .title-s1 {
     margin-bottom: 10px;
+    margin-top: 0;
 
     color: var(--font-сolor-black-other);
     text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
 }
 
 .p-s1 {
+    margin-bottom: 0;
+    margin-top: 0;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
+    letter-spacing: 0.03em;
 }
 
 /* виды работ */
@@ -255,7 +265,7 @@ button {
 .section2 {
     outline: 1px solid tomato;
 
-    margin-bottom: 94px;
+    padding-bottom: 94px;
 }
 
 .title-s2 {
@@ -284,6 +294,8 @@ button {
 /* состав команды */
 .team {
     background-color: var(--background-color-grey);
+    padding-top: 94px;
+    padding-bottom: 94px;
 
     outline: 1px solid tomato;
 }
@@ -293,15 +305,23 @@ button {
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--background-color-white);
-    width: 270px;
+    padding-right: 30px;
+}
+
+.team-bg:last-child {
+    padding-right: 0;
+}
+
+.team-description {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .title-s3 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 94px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     color: var(--font-сolor-black-other);
     font-weight: 700;
@@ -312,18 +332,14 @@ button {
 .list-s3 {
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 94px;
     padding-left: 0;
     display: flex;
 }
 
-.team-igor,
-.team-olga,
-.team-kolya {
-    margin-right: 30px;
-}
 
 .name-s3 {
+    margin-top: 0;
+    margin-bottom: 10px;
     text-align: center;
 
     color: var(--font-сolor-black-other);
@@ -335,7 +351,7 @@ button {
 .job-s3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     text-align: center;
 
     font-weight: 400;
@@ -350,10 +366,8 @@ button {
     color: var(--font-сolor-white);
 
     outline: 1px solid tomato;
-}
-
-.footer .container {
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .location {
@@ -362,6 +376,11 @@ button {
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
+}
+
+.mail-footer-li {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .mail-footer,
@@ -387,9 +406,9 @@ button {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
-    padding-top: 20px;
-    padding-bottom: 60px;
+    margin-top: 20px;
 }
+
 
 /* Portfolio.html */
 
@@ -400,8 +419,8 @@ button {
 .main-portfolio {
     outline: 1px solid tomato;
 
-    margin-top: 94px;
-    margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .img-pf {
@@ -474,7 +493,8 @@ button {
 }
 
 .ul-button {
-    margin-bottom: 34px;
+    margin-bottom: 50px;
+    margin-top: 0;
     padding-left: 0;
     display: flex;
     justify-content: center;
@@ -489,6 +509,8 @@ button {
 }
 
 .ul-portfolio {
+    margin-top: 0;
+    margin-bottom: 0;
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -522,5 +544,7 @@ button {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
+    margin-top: 4px;
+    margin-bottom: 0;
 }
 
